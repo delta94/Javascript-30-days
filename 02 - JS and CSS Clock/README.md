@@ -3,7 +3,7 @@
 # 02 - JS + CSS Clock
 pointers rotate animation, get times, changing pointer positions.
 
-![JS + CSS Clock](images/clock.png)
+![JS + CSS Clock](images/02_00.png)
 
 view demo [here](https://amelieyeh.github.io/JS30/02-JS+CSSClock/index.html)
 
