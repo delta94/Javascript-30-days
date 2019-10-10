@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+   <style>
+      html { background-color: #e2e0db; }
+      .title {
+        color: #b2c4c3;
+        font-size: 160px;
+        font-weight: bold;
+        line-height: 2em;
+        margin: 0;
+        text-align: center;
+      }
+
+      .decode {
+        color: red;
+        font-size: 80px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <div class="title">Life is...</div>
+  <div class="decode"></div>
+<script>
+
+  const pressed = [];
+  const secretCode = 'wesbos';
+  let decode = document.querySelector('.decode')
+
+  window.addEventListener('keyup',(e) => {
+    pressed.push(e.key)
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    console.log(pressed)
+    if(pressed.join('').includes(secretCode)) {
+      decode.innerHTML= '';
+      decode.insertAdjacentHTML('afterbegin', secretCode);
+      cornify_add();
+    }
+  })
+
+</script>
+</body>
+</html>
